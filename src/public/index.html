@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>User Admin Panel</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="layout">
+
+        <!-- ========================= -->
+        <!-- Sidebar -->
+        <!-- ========================= -->
+
+        <aside class="sidebar">
+
+            <h2>Admin Panel</h2>
+
+            <nav>
+
+                <a
+                    href="#"
+                    class="active">
+
+                    Users
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ========================= -->
+        <!-- Main Content -->
+        <!-- ========================= -->
+
+        <main class="main">
+
+
+            <!-- ========================= -->
+            <!-- Top Bar -->
+            <!-- ========================= -->
+
+            <header class="topbar">
+
+                <h1>Users</h1>
+
+                <button
+                    type="button"
+                    class="primary-btn"
+                    onclick="openCreateForm()">
+
+                    + Add User
+
+                </button>
+
+            </header>
+
+
+            <!-- ========================= -->
+            <!-- Create / Edit Form -->
+            <!-- ========================= -->
+
+            <section
+                id="userFormContainer"
+                class="card form-container hidden">
+
+
+                <h2 id="formTitle">
+                    Create User
+                </h2>
+
+
+                <form id="userForm">
+
+
+                    <!-- Hidden ID -->
+                    <input
+                        type="hidden"
+                        id="userId"
+                        name="userId">
+
+
+                    <!-- Name + Mobile -->
+
+                    <div class="form-row">
+
+
+                        <!-- Name -->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter name"
+                                autocomplete="name"
+                                required>
+
+                        </div>
+
+
+                        <!-- Mobile -->
+
+                        <div class="form-group">
+
+                            <label for="mobile">
+                                Mobile
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="mobile"
+                                name="mobile"
+                                placeholder="Enter mobile number"
+                                autocomplete="tel"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Address -->
+
+                    <div class="form-group">
+
+                        <label for="address">
+                            Address
+                        </label>
+
+                        <input
+                            type="text"
+                            id="address"
+                            name="address"
+                            placeholder="Enter address"
+                            autocomplete="street-address"
+                            required>
+
+                    </div>
+
+
+                    <!-- Form Actions -->
+
+                    <div class="form-actions">
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn">
+
+                            Save
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="secondary-btn"
+                            onclick="closeForm()">
+
+                            Cancel
+
+                        </button>
+
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- ========================= -->
+            <!-- Users Table -->
+            <!-- ========================= -->
+
+            <section class="card">
+
+
+                <!-- Card Header -->
+
+                <div class="card-header">
+
+                    <h2>
+                        User List
+                    </h2>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        onclick="loadUsers()">
+
+                        Refresh
+
+                    </button>
+
+                </div>
+
+
+                <!-- Table -->
+
+                <div class="table-container">
+
+                    <table>
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>ID</th>
+
+                                <th>Name</th>
+
+                                <th>Address</th>
+
+                                <th>Mobile</th>
+
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="usersTable">
+
+                            <!--
+                                Users will be loaded here
+                                using public/app.js
+                            -->
+
+                        </tbody>
+
+
+                    </table>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- Frontend JavaScript -->
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
