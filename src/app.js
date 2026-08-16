@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json());
 
-// Serve public folder
+// Serve public folder to UI
 app.use(express.static(path.join(__dirname, "public")));
 
 // API routes
