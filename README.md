@@ -10,7 +10,7 @@ A simple mini project demonstrating core CRUD (Create, Read, Update, Delete) fun
 
 ## Tech Stack
 - Frontend: HTML, CSS, JavaScript
-- Backend/Database: *(Apna tech stack yahan likhein, e.g., Node.js / LocalStorage)*
+- Backend/Database: *(Write your tech stack here., e.g., Node.js / LocalStorage)*
 
 ## How to Run
 1. Clone this repository:
